@@ -1,5 +1,6 @@
-echo "tes aja ya"
-sleep 1
+clear
+echo -e "\t\t\t\t\e[1;36;41m TES AJA YA \e[0m"
+sleep 1s
 
 clear
 
@@ -24,6 +25,7 @@ rm latest.tar.gz
 cd wordpress
 cp wp-config-sample.php wp-config.php
 
+clear
 #database
 DBName=
             while [[ $DBName = "" ]]; do
@@ -44,7 +46,7 @@ DBPass=
             done
 
 clear
-sleep 1
+sleep 1s
 
 #set database
                 sed -i "s/database_name_here/$DBName/" /var/www/html/wordpress/wp-config.php
@@ -56,8 +58,10 @@ sleep 1
 #mysql
 mysql -u root -p -e "CREATE DATABASE $DBName"
 mysql -u root -p -e "CREATE USER '$DBUser'@'localhost' identified by '$DBPass'; "
-mysql -u root -p -e "GRANT ALL PRIVILEGES ON *.* to '$DBUser'@'localhost';"
+mysql -u root -p -e "GRANT ALL PRIVILEGES ON *.* to '$DBUser'@'localhost'; "
 mysql -u root -p -e "FLUSH PRIVILEGES; "
 
+clear
+
 #finish
-echo "TAMATLAH SUDAHH"
+echo -e "\t\t\tTAMATLAH SUDAHH \c"
