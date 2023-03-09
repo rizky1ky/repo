@@ -65,3 +65,4 @@ clear
 
 #finish
 echo -e "\t\t\tTAMATLAH SUDAHH \c"
+clear
